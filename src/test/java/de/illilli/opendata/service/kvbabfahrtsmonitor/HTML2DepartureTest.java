@@ -21,7 +21,7 @@ public class HTML2DepartureTest {
 	@Test
 	public void testNumberOfEntries() throws ParseException {
 		HTML2Departure h2d = new HTML2Departure(html);
-		int expected = 40;
+		int expected = 49;
 		int actual = h2d.getData().size();
 		Assert.assertEquals(expected, actual);
 	}
@@ -29,7 +29,7 @@ public class HTML2DepartureTest {
 	@Test
 	public void testDate() throws ParseException {
 		HTML2Departure h2d = new HTML2Departure(html);
-		long expected = 1492145880000l;
+		long expected = 1513051620000l;
 		long actual = h2d.getDate().getTime();
 		Assert.assertEquals(expected, actual);
 	}
@@ -37,7 +37,7 @@ public class HTML2DepartureTest {
 	@Test
 	public void testFirstDeparture() throws ParseException {
 		HTML2Departure h2d = new HTML2Departure(html);
-		Departure expected = new Departure("18", "Buchheim", 0);
+		Departure expected = new Departure("9", "Königsforst", 1);
 		Departure actual = h2d.getData().get(0);
 		Assert.assertEquals(expected, actual);
 	}
