@@ -40,9 +40,10 @@ public class AskForDepartures implements AskFor<String> {
 	 */
 	public AskForDepartures(URL url) throws IOException {
 		InputStream inputStream = url.openStream();
-		this.data = IOUtils.toString(inputStream, "ISO-8859-1");
+		this.data = IOUtils.toString(inputStream, "UTF-8");
 	}
 
+	@Override
 	public String getData() {
 		return this.data;
 	}
