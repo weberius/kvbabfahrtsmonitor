@@ -18,8 +18,8 @@ public class AskForDepartureTimeTest {
 	public void testForHtmlContent() throws IOException {
 		int id = 2;
 		AskFor<String> askfor = new AskForDepartures(id);
-		boolean startsWithDoctype = askfor.getData().startsWith("<!DOCTYPE html PUBLIC");
-		Assert.assertTrue(startsWithDoctype);
+		boolean html = askfor.getData().startsWith("<html>");
+		Assert.assertTrue(html);
 	}
 
 }
