@@ -33,9 +33,9 @@ public class Service {
 
 	/**
 	 * <p>
-	 * Beispiel: <a href=
-	 * "http://localhost:8080/publicTransportDepartureTimeCologne/service/stop/2">
-	 * /publicTransportDepartureTimeCologne/service/stop/2</a>
+	 * Beispiel:
+	 * <a href= "http://localhost:8080/kvbabfahrtsmonitor/service/stop/2">
+	 * /kvbabfahrtsmonitor/service/stop/2</a>
 	 * </p>
 	 * 
 	 * @param id
@@ -55,16 +55,27 @@ public class Service {
 
 		Facade facade = null;
 		if (datatables) {
-			logger.info("call '/publicTransportDepartureTimeCologne/service/stop/" + id + "&datatables'");
+			logger.info("call '/kvbabfahrtsmonitor/service/stop/" + id + "&datatables'");
 			facade = new DepartureDatatablesFacade(id);
 		} else {
-			logger.info("call '/publicTransportDepartureTimeCologne/service/stop/" + id + "'");
+			logger.info("call '/kvbabfahrtsmonitor/service/stop/" + id + "'");
 			facade = new DepartureFacade(id);
 		}
 
 		return facade.getJson();
 	}
 
+	/**
+	 * <p>
+	 * Beispiel:
+	 * <a href= "http://localhost:8080/kvbabfahrtsmonitor/service/ping">
+	 * /kvbabfahrtsmonitor/service/ping</a>
+	 * </p>
+	 * 
+	 * @return
+	 * @throws MalformedURLException
+	 * @throws IOException
+	 */
 	@GET
 	@Produces({ MediaType.APPLICATION_JSON })
 	@Path("/ping")
