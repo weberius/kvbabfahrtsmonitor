@@ -15,7 +15,7 @@ public class HTML2DepartureTest {
 
 	@Before
 	public void setUp() throws Exception {
-		html = IOUtils.toString(this.getClass().getResourceAsStream("/neumarkt.htm"));
+		html = IOUtils.toString(this.getClass().getResourceAsStream("/neumarkt.html"));
 	}
 
 	@Test

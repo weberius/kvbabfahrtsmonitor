@@ -7,10 +7,12 @@ import java.text.ParseException;
 
 import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import de.illilli.opendata.service.Facade;
 
+@Ignore
 public class DepartureFacadeTest {
 
 	@Test
