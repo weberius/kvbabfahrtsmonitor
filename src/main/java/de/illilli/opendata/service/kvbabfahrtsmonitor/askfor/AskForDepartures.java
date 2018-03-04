@@ -17,6 +17,7 @@ import de.illilli.opendata.service.Config;
 public class AskForDepartures implements AskFor<String> {
 
 	private String data;
+	public static final String ENCODING = Config.getProperty("encoding");
 
 	/**
 	 * Die Url ist in der config.properties definiert. Es wird die entsprechende
@@ -40,7 +41,7 @@ public class AskForDepartures implements AskFor<String> {
 	 */
 	public AskForDepartures(URL url) throws IOException {
 		InputStream inputStream = url.openStream();
-		this.data = IOUtils.toString(inputStream, "UTF-8");
+		this.data = IOUtils.toString(inputStream, ENCODING);
 	}
 
 	@Override

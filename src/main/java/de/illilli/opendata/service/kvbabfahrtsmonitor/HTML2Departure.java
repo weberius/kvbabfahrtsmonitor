@@ -52,7 +52,8 @@ public class HTML2Departure {
 		}
 
 		table = doc.select("table").last();
-		ite = table.select("td:not([colspan]):not(:has(*))").iterator();
+		// ite = table.select("td:not([colspan]):not(:has(*))").iterator();
+		ite = table.select("td:not([colspan])").iterator();
 		for (int i = 0; ite.hasNext(); i++) {
 			Departure departure = new Departure();
 			for (int j = 0; j < 3; j++) {

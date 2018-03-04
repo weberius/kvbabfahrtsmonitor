@@ -1,6 +1,6 @@
 # KVB Abfahrtsmonitor
 
-Das KVB Abfahrtsmonitor liest zu einer angefragten Haltestelle die Abfahrtszeiten ein und formatiert sie in eine JSON-Struktur, die einfach auf einer Webseite angezeigt werden kann. Grundlage hierfür ist der [Widget Generator](http://www.kvb-koeln.de/generator/) der [Kölner Verkehrsbetriebe](http://www.kvb-koeln.de/).
+Das KVB Abfahrtsmonitor liest zu einer angefragten Haltestelle die Abfahrtszeiten ein und formatiert sie in eine JSON-Struktur, die einfach auf einer Webseite angezeigt werden kann. Grundlage hierfür ist der [Widget Generator](https://www.kvb.koeln/fahrtinfo/widget-generator/index.html) der [Kölner Verkehrsbetriebe](http://www.kvb-koeln.de/).
 
 # Entwicklungsstand
 
